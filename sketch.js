@@ -8,6 +8,7 @@ var ObstaclesGroup,obstacle1,obstacle2, obstacle3, obstacle4, obstacle5, obstacl
 var CloudsGroup,cloudImage;
 var gameOver,gameOverimage,restart,restartimage;
 var count = 0;
+var jungle;
 function preload(){
  RunningTrex = loadAnimation("trex1.png","trex3.png","trex4.png");
  DeadTrex = loadAnimation("trex_collided.png"); 
@@ -21,6 +22,7 @@ function preload(){
  obstacle6 = loadImage("obstacle6.png"); 
  gameOverimage = loadImage("gameOver.png");
  restartimage = loadImage("restart.png");
+ jungle = loadImage("jungle.jpg");
 }
 function setup(){
 createCanvas(600,200);
@@ -64,7 +66,7 @@ textFont("Georgia");
 
 function draw() {
   //set background to white
-  background("white");
+  background(jungle);
   //display score
   text("Score: "+ count, 200, 50);
   
